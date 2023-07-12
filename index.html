@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Management System</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Stock Management System</h1>
+  
+    <div class="stock-form">
+      <h2 class="form-heading">Receive Incoming Stock</h2>
+      <div class="form-group">
+        <label for="item-name">Item Name:</label>
+        <input type="text" id="item-name" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" required>
+      </div>
+      <button onclick="receiveStock()" class="btn">Receive Stock</button>
+    </div>
+  
+    <div class="stock-records">
+      <h2 class="records-heading">Stock Records</h2>
+      <div class="search">
+        <label for="search-input">Search:</label>
+        <input type="text" id="search-input" onkeyup="searchRecords()" placeholder="Enter item name">
+      </div>
+      <table id="stock-table" class="stock-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="stock-records-body"></tbody>
+      </table>
+      <div class="count">
+        <label>Number of Items: <span id="item-count">0</span></label>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
